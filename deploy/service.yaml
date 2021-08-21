@@ -1,0 +1,15 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: exporter
+  labels:
+    app: exporter
+spec:
+  ports:
+  - name: http
+    port: 8090
+    targetPort: 8090
+  selector:
+    app: exporter
+  type: NodePort
