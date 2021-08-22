@@ -23,14 +23,14 @@ func (c *httpClient) Get(url string) (float64, float64) {
 	result, err := c.Client.Get(url)
 
 	if err != nil {
-		return 0, time.Since(start).Seconds()
+		return 0, float64(time.Since(start).Milliseconds())
 	}
 
 	defer result.Body.Close()
 
 	if result.StatusCode == http.StatusOK {
 
-		return 1, time.Since(start).Seconds()
+		return 1, float64(time.Since(start).Milliseconds())
 	}
 
 	return 0, float64(time.Since(start).Milliseconds())

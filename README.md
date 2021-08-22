@@ -21,6 +21,6 @@ $ make deploy
 
 ## get metrics
 ```
-$ curl -X GET $(minikube service exporter --url)/metrices
+$ curl -X GET $(minikube service --url exporter)/metrics
 
 ```

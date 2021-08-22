@@ -1,4 +1,4 @@
 {
 
-    "urls":["http://www.facebook.com","http://www.twitter.com"]
+    "urls":["https://httpstat.us/503","https://httpstat.us/200"]
 }
